@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+
+<script>
+  $(document).ready(function () {
+      $('.dropdown-toggle').dropdown();
+  });
+</script>
+
+{%load static%}
+  <!-- Custom CSS -->
+<link href="{%static 'css/style.css'%}" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center " style="margin-top: 0%;">
+        <div class="col-10 col-md-8 col-lg-6">
+            <!-- Form -->
+            <form class="form-example" action="" method="post">
+                {%csrf_token%}
+                {% load crispy_forms_tags %}
+                
+                <h1 style="text-align: center;">Registration Form</h1>
+                <div class="form-group">
+                    {{ form|crispy }}
+                </div>
+               
+                <input type="submit" value="Submit" class="btn btn-primary">
+           
+            </form>
+            
+            &nbsp;
+            <h6>Already Registered? <a href='/'>Log In here</a></h6>
+            <!-- Form end -->
+        </div>
+
+    </div>
+</div>

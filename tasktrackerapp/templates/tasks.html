@@ -1,0 +1,33 @@
+<form method="POST">
+    {%csrf_token%}
+<table border="1">
+    <tr>
+        <td>Task Name: <input type="text" name='task_name'></td>
+    </tr>
+    
+    <tr>
+        
+        <td>Project:
+            <select name="project">
+            {%for i in proj%}
+              <option value={{i.id}}>{{i.proj_name}}</option>
+            {%endfor%}
+              
+            </select>
+        </td>
+        
+    </tr>
+
+    <tr>
+        <td>Start Time: <input type="time" name="start_time"></td>
+    </tr>
+
+    <tr>
+        <td>End Time: <input type="time" name="end_time"></td>
+    </tr>
+    
+</table>
+    <tr>
+        <input type="submit">
+    </tr>
+</form>

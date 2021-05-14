@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+
+<script>
+  $(document).ready(function () {
+      $('.dropdown-toggle').dropdown();
+  });
+</script>
+
+{%load static%}
+  <!-- Custom CSS -->
+<link href="{%static 'css/style.css'%}" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    
+    <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center " style="margin-top: 10%;">
+        <div class="col-10 col-md-8 col-lg-6">
+            <!-- Form -->
+           
+            <form class="form-example" action="" method="POST">
+                {% csrf_token %}
+                <h1 style="text-align: center;">Login Form</h1>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control username" id="username" placeholder="Username..." name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control password" id="password" placeholder="Password..." name="password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-customized">Login</button>
+                
+            </form>
+            
+            <h3>New User? <a href="tasktrackerregister">Register here</a></h3>
+            <!-- Form end -->
+        </div>
+    </div>
+    
+</div>
+
+    
+  
+
+    
+      
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+
+<table border="1">
+    
+    <tr>
+        <th>Task Name</th>
+        <th>project</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+
+
+
+    </tr>
+    {% for i in object_list%}
+    <tr>
+        <td>{{i.task_name}}</td>
+        <td>{{i.project}}</td>
+        <td>{{i.start_time}}</td>
+        <td>{{i.end_time}}</td>
+       
+
+
+
+    </tr>
+    {% endfor %}
+</table><br>
+<a href="{%url 'TaskTracker:logout'%} ">Log Out</a>

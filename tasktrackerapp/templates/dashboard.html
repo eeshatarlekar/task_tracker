@@ -1,0 +1,51 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+
+<script>
+  $(document).ready(function () {
+      $('.dropdown-toggle').dropdown();
+  });
+</script>
+
+{%load static%}
+  <!-- Custom CSS -->
+<link href="{%static 'css/style.css'%}" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body style="margin-left: 10px;">
+<h1>Dashboard</h1>
+<br><br>
+<button class="btn btn-primary"><h3><a href="{%url 'TaskTracker:project'%} " style="text-decoration: none; color: white;">Add Project</a></h3></button><br><br>
+<button class="btn btn-primary"><h3><a href="{%url 'TaskTracker:task'%} " style="text-decoration: none; color: white;">Add Task</a></h3></button><br><br>
+
+<button class="btn btn-primary"><h3><a href="{%url 'TaskTracker:tasklist'%} " style="text-decoration: none; color: white;">Task List</a></h3></button>
+
+
+
+
+   
+                
+            
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+</html>
